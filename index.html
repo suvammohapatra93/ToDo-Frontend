@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suvam's Advanced To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="theme-toggle">Toggle Dark/Light Theme</button>
+    <div class="container">
+      <h1>Suvam's To-Do List</h1>
+      <div class="input-container">
+        <input type="text" id="task-input" placeholder="Enter a new task..." />
+        <select id="task-category">
+          <option value="">Select Category</option>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="shopping">Shopping</option>
+          <option value="others">Others</option>
+        </select>
+        <input type="date" id="due-date" />
+        <button id="add-task-btn">Add Task</button>
+      </div>
+      <div class="filter-container">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <select id="sort-tasks">
+          <option value="alphabetical">Alphabetical</option>
+          <option value="priority">Priority</option>
+          <option value="date">Date Added</option>
+        </select>
+      </div>
+      <ul id="task-list"></ul>
+      <div class="action-buttons">
+        <button id="clear-completed-btn">Clear Completed</button>
+        <button id="clear-all-btn">Clear All</button>
+      </div>
+      <button id="login-btn">Login/Signup</button>
+    </div>
+
+    <!-- Login/Signup Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login / Signup</h2>
+        <form id="auth-form">
+          <input type="text" id="username" placeholder="Username" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
